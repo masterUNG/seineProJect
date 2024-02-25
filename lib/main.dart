@@ -70,7 +70,12 @@ void notificationTapBackground(NotificationResponse notificationResponse) {
 }
 
 void main(context) async {
+  
+
   WidgetsBinding widgetsBinding = WidgetsFlutterBinding.ensureInitialized();
+
+
+
   FlutterNativeSplash.preserve(widgetsBinding: widgetsBinding);
   await Firebase.initializeApp();
   await _configureLocalTimeZone(context);

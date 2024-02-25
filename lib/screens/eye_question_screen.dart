@@ -24,40 +24,11 @@ class _EyeQuestionScreenState extends State<EyeQuestionScreen> {
           child: Column(
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
-              Row(
-                children: [
-                  Padding(
-                    padding: const EdgeInsets.only(left: 15, top: 15),
-                    child: Text(
-                      Languages.of(context)!.questionDaily,
-                      style: TextStyle(
-                        fontSize: 18.sp,
-                        fontWeight: FontWeight.bold,
-                      ),
-                    ),
-                  ),
-                  const Spacer(),
-                  ElevatedButton(
-                    onPressed: () {
-                      Navigator.pop(context);
-                    },
-                    child: const Icon(Icons.close),
-                  ),
-                ],
-              ),
+              displayTitle(context),
               const SizedBox(
                 height: 20,
               ),
-              Padding(
-                padding: const EdgeInsets.all(8.0),
-                child: Text(
-                  Languages.of(context)!.eyeSickness,
-                  style: TextStyle(
-                    fontSize: 14.sp,
-                    fontWeight: FontWeight.bold,
-                  ),
-                ),
-              ),
+              displayScore(context),
               const SizedBox(
                 height: 20,
               ),
@@ -308,5 +279,42 @@ class _EyeQuestionScreenState extends State<EyeQuestionScreen> {
         ),
       ),
     );
+  }
+
+  Padding displayScore(BuildContext context) {
+    return Padding(
+              padding: const EdgeInsets.all(8.0),
+              child: Text(
+                Languages.of(context)!.eyeSickness,
+                style: TextStyle(
+                  fontSize: 14.sp,
+                  fontWeight: FontWeight.bold,
+                ),
+              ),
+            );
+  }
+
+  Row displayTitle(BuildContext context) {
+    return Row(
+              children: [
+                Padding(
+                  padding: const EdgeInsets.only(left: 15, top: 15),
+                  child: Text(
+                    Languages.of(context)!.questionDaily,
+                    style: TextStyle(
+                      fontSize: 18.sp,
+                      fontWeight: FontWeight.bold,
+                    ),
+                  ),
+                ),
+                const Spacer(),
+                ElevatedButton(
+                  onPressed: () {
+                    Navigator.pop(context);
+                  },
+                  child: const Icon(Icons.close),
+                ),
+              ],
+            );
   }
 }
