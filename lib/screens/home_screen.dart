@@ -8,6 +8,7 @@ import 'package:allergic_app/screens/setting_screen.dart';
 import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_secure_storage/flutter_secure_storage.dart';
+import 'package:getwidget/getwidget.dart';
 import 'package:intl/intl.dart';
 import 'package:table_calendar/table_calendar.dart';
 import 'package:sizer/sizer.dart';
@@ -194,40 +195,25 @@ class _HomeScreenState extends State<HomeScreen> {
                     ClipRRect(
                       borderRadius: BorderRadius.circular(35),
                       child: profileImage == '' || profileImage == 'null'
-                          ? Image.asset(
-                              'assets/images/user.png',
-                              width: 7.h,
-                              height: 10.w,
-                              fit: BoxFit.fill,
-                            )
-                          : Image.network(
-                              profileImage,
-                              width: 9.h,
-                              height: 18.w,
-                              fit: BoxFit.cover,
-                            ),
+                          ? const GFAvatar(backgroundImage: AssetImage('assets/images/user.png'),)
+                          : GFAvatar(backgroundImage: NetworkImage(profileImage),),
                     ),
-                    Container(
-                      alignment: Alignment.center,
-                      width: 10.w,
-                      height: 10.w,
-                      decoration: BoxDecoration(
-                          borderRadius: BorderRadius.circular(30),
-                          border: Border.all()),
-                      child: IconButton(
-                        icon: const Icon(
-                          Icons.settings,
-                        ),
-                        onPressed: () {
-                          Navigator.push(context, MaterialPageRoute(
-                            builder: (context) {
-                              return const SettingScreen();
-                            },
-                          )).then((value) {
-                            _getUserName();
-                          });
-                        },
+                    GFIconButton(
+                      color: GFColors.DARK,
+                      shape: GFIconButtonShape.circle,
+                      type: GFButtonType.outline,
+                      icon: const Icon(
+                        Icons.settings,
                       ),
+                      onPressed: () {
+                        Navigator.push(context, MaterialPageRoute(
+                          builder: (context) {
+                            return const SettingScreen();
+                          },
+                        )).then((value) {
+                          _getUserName();
+                        });
+                      },
                     )
                   ],
                 ),
