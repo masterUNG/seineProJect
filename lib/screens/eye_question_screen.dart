@@ -5,6 +5,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter/rendering.dart';
 import 'package:flutter/widgets.dart';
 import 'package:flutter_form_builder/flutter_form_builder.dart';
+import 'package:getwidget/getwidget.dart';
 import 'package:intl/intl.dart';
 import 'package:sizer/sizer.dart';
 
@@ -58,19 +59,25 @@ class _EyeQuestionScreenState extends State<EyeQuestionScreen> {
                           ),
                         ],
                       ),
-                      Row(
-                        children: [
-                          Padding(
-                            padding: const EdgeInsets.only(left: 20),
-                            child: Text(
-                              Languages.of(context)!.dailyQuestion5_1,
-                              style: TextStyle(
-                                fontSize: 12.sp,
+                      LayoutBuilder(
+                          builder: (context, BoxConstraints boxConstraints) {
+                        return Row(
+                          children: [
+                            Padding(
+                              padding: const EdgeInsets.only(left: 20),
+                              child: SizedBox(
+                                width: boxConstraints.maxWidth - 40,
+                                child: Text(
+                                  Languages.of(context)!.dailyQuestion5_1,
+                                  style: TextStyle(
+                                    fontSize: 12.sp,
+                                  ),
+                                ),
                               ),
                             ),
-                          ),
-                        ],
-                      ),
+                          ],
+                        );
+                      }),
                       const SizedBox(
                         height: 10,
                       ),
@@ -134,24 +141,35 @@ class _EyeQuestionScreenState extends State<EyeQuestionScreen> {
                   child: Column(
                     crossAxisAlignment: CrossAxisAlignment.center,
                     children: [
-                      Padding(
-                        padding: const EdgeInsets.only(left: 20),
-                        child: Text(
-                          Languages.of(context)!.dailyQuestion6,
-                          style: TextStyle(
-                            fontSize: 15.sp,
-                            fontWeight: FontWeight.bold,
+                      Row(
+                        children: [
+                          Padding(
+                            padding: const EdgeInsets.only(left: 20),
+                            child: Text(
+                              Languages.of(context)!.dailyQuestion6,
+                              style: TextStyle(
+                                fontSize: 15.sp,
+                                fontWeight: FontWeight.bold,
+                              ),
+                            ),
                           ),
-                        ),
+                        ],
                       ),
-                      Padding(
-                        padding: const EdgeInsets.only(left: 20),
-                        child: Text(
-                          Languages.of(context)!.dailyQuestion6_1,
-                          style: TextStyle(
-                            fontSize: 12.sp,
+                      Row(
+                        children: [
+                          Padding(
+                            padding: const EdgeInsets.only(left: 20),
+                            child: SizedBox(
+                              width: boxConstraints.maxWidth - 40,
+                              child: Text(
+                                Languages.of(context)!.dailyQuestion6_1,
+                                style: TextStyle(
+                                  fontSize: 12.sp,
+                                ),
+                              ),
+                            ),
                           ),
-                        ),
+                        ],
                       ),
                       const SizedBox(
                         height: 10,
@@ -216,24 +234,35 @@ class _EyeQuestionScreenState extends State<EyeQuestionScreen> {
                   child: Column(
                     crossAxisAlignment: CrossAxisAlignment.center,
                     children: [
-                      Padding(
-                        padding: const EdgeInsets.only(left: 20),
-                        child: Text(
-                          Languages.of(context)!.dailyQuestion7,
-                          style: TextStyle(
-                            fontSize: 15.sp,
-                            fontWeight: FontWeight.bold,
+                      Row(
+                        children: [
+                          Padding(
+                            padding: const EdgeInsets.only(left: 20),
+                            child: Text(
+                              Languages.of(context)!.dailyQuestion7,
+                              style: TextStyle(
+                                fontSize: 15.sp,
+                                fontWeight: FontWeight.bold,
+                              ),
+                            ),
                           ),
-                        ),
+                        ],
                       ),
-                      Padding(
-                        padding: const EdgeInsets.only(left: 20),
-                        child: Text(
-                          Languages.of(context)!.dailyQuestion7_1,
-                          style: TextStyle(
-                            fontSize: 12.sp,
+                      Row(
+                        children: [
+                          Padding(
+                            padding: const EdgeInsets.only(left: 20),
+                            child: SizedBox(
+                              width: boxConstraints.maxWidth - 40,
+                              child: Text(
+                                Languages.of(context)!.dailyQuestion7_1,
+                                style: TextStyle(
+                                  fontSize: 12.sp,
+                                ),
+                              ),
+                            ),
                           ),
-                        ),
+                        ],
                       ),
                       const SizedBox(
                         height: 10,
@@ -293,28 +322,20 @@ class _EyeQuestionScreenState extends State<EyeQuestionScreen> {
                   height: 30,
                 ),
                 Center(
-                  child: SizedBox(
-                    width: 20.w,
-                    height: 5.h,
-                    child: ElevatedButton(
-                      style: ElevatedButton.styleFrom(
-                        foregroundColor: Colors.white,
-                        backgroundColor: Colors.blueAccent, // foreground
-                      ),
-                      onPressed: () {
-                        //List<double> eyeValue = [_dailyQuestion5, _dailyQuestion6, _dailyQuestion7];
-                        Map<String, double> eyeValue = {
-                          "_dailyQuestion5": _dailyQuestion5,
-                          "_dailyQuestion6": _dailyQuestion6,
-                          "_dailyQuestion7": _dailyQuestion7,
-                        };
-                        Navigator.pop(context, eyeValue);
-                      },
-                      child: Text(
-                        Languages.of(context)!.saveDailyquestion,
-                        style: TextStyle(fontSize: 12.sp),
-                      ),
-                    ),
+                  child: GFButton(
+                    type: GFButtonType.outline2x,
+                    shape: GFButtonShape.pills,
+                    text: Languages.of(context)!.saveDailyquestion,
+                    textStyle: TextStyle(fontSize: 12.sp, color: GFColors.PRIMARY),
+                    onPressed: () {
+                      //List<double> eyeValue = [_dailyQuestion5, _dailyQuestion6, _dailyQuestion7];
+                      Map<String, double> eyeValue = {
+                        "_dailyQuestion5": _dailyQuestion5,
+                        "_dailyQuestion6": _dailyQuestion6,
+                        "_dailyQuestion7": _dailyQuestion7,
+                      };
+                      Navigator.pop(context, eyeValue);
+                    },
                   ),
                 ),
               ],
@@ -356,7 +377,8 @@ class _EyeQuestionScreenState extends State<EyeQuestionScreen> {
           child: Container(
             decoration: BoxDecoration(
               borderRadius: BorderRadius.circular(30),
-             gradient: LinearGradient(colors: [Colors.red, Colors.blue, Colors.green]),
+              gradient: const LinearGradient(
+                  colors: [Colors.red, Colors.blue, Colors.green]),
             ),
             padding: const EdgeInsets.symmetric(horizontal: 8, vertical: 4),
             // color: Colors.grey,
