@@ -246,7 +246,8 @@ class _NoseQuestionScreenState extends State<NoseQuestionScreen> {
                 const SizedBox(
                   height: 20,
                 ),
-                Container(width: boxConstraints.maxWidth,
+                Container(
+                  width: boxConstraints.maxWidth,
                   color: Colors.grey[200],
                   child: Column(
                     crossAxisAlignment: CrossAxisAlignment.center,
@@ -269,7 +270,8 @@ class _NoseQuestionScreenState extends State<NoseQuestionScreen> {
                         children: [
                           Padding(
                             padding: const EdgeInsets.only(left: 20),
-                            child: SizedBox(width: boxConstraints.maxWidth - 40,
+                            child: SizedBox(
+                              width: boxConstraints.maxWidth - 40,
                               child: Text(
                                 Languages.of(context)!.dailyQuestion3_1,
                                 style: TextStyle(
@@ -283,7 +285,8 @@ class _NoseQuestionScreenState extends State<NoseQuestionScreen> {
                       const SizedBox(
                         height: 10,
                       ),
-                      SizedBox(width: boxConstraints.maxWidth*0.9,
+                      SizedBox(
+                        width: boxConstraints.maxWidth * 0.9,
                         child: Stack(
                           children: [
                             FormBuilderSlider(
@@ -332,7 +335,8 @@ class _NoseQuestionScreenState extends State<NoseQuestionScreen> {
                 const SizedBox(
                   height: 20,
                 ),
-                Container(width: boxConstraints.maxWidth,
+                Container(
+                  width: boxConstraints.maxWidth,
                   color: Colors.grey[200],
                   child: Column(
                     crossAxisAlignment: CrossAxisAlignment.center,
@@ -355,7 +359,8 @@ class _NoseQuestionScreenState extends State<NoseQuestionScreen> {
                         children: [
                           Padding(
                             padding: const EdgeInsets.only(left: 20),
-                            child: SizedBox(width: boxConstraints.maxWidth - 40,
+                            child: SizedBox(
+                              width: boxConstraints.maxWidth - 40,
                               child: Text(
                                 Languages.of(context)!.dailyQuestion4_1,
                                 style: TextStyle(
@@ -369,7 +374,8 @@ class _NoseQuestionScreenState extends State<NoseQuestionScreen> {
                       const SizedBox(
                         height: 10,
                       ),
-                      SizedBox(width: boxConstraints.maxWidth*0.9,
+                      SizedBox(
+                        width: boxConstraints.maxWidth * 0.9,
                         child: Stack(
                           children: [
                             FormBuilderSlider(
