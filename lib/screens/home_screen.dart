@@ -208,7 +208,8 @@ class _HomeScreenState extends State<HomeScreen> {
                             ),
                     ),
                     Container(
-                      width: 5.h,
+                      alignment: Alignment.center,
+                      width: 10.w,
                       height: 10.w,
                       decoration: BoxDecoration(
                           borderRadius: BorderRadius.circular(30),
@@ -253,7 +254,7 @@ class _HomeScreenState extends State<HomeScreen> {
                 daysOfWeekVisible: false,
                 headerStyle: HeaderStyle(
                     titleTextStyle: TextStyle(fontSize: 11.sp),
-                    formatButtonTextStyle: TextStyle(fontSize:7.sp)),
+                    formatButtonTextStyle: TextStyle(fontSize: 7.sp)),
                 calendarStyle: CalendarStyle(
                   weekendDecoration: BoxDecoration(
                     color: Colors.red[100],

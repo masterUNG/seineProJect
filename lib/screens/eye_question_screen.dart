@@ -2,6 +2,7 @@ import 'package:allergic_app/utility/app_constant.dart';
 import 'package:allergic_app/views/widget_image.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter/painting.dart';
 import 'package:flutter/rendering.dart';
 import 'package:flutter/widgets.dart';
 import 'package:flutter_form_builder/flutter_form_builder.dart';
@@ -40,8 +41,9 @@ class _EyeQuestionScreenState extends State<EyeQuestionScreen> {
                   height: 20,
                 ),
                 Container(
+                  margin: const EdgeInsets.symmetric(horizontal: 16),
                   width: boxConstraints.maxWidth,
-                  color: Colors.grey[200],
+                  decoration: AppConstant().gradientBox(),
                   child: Column(
                     crossAxisAlignment: CrossAxisAlignment.center,
                     children: [
@@ -136,8 +138,9 @@ class _EyeQuestionScreenState extends State<EyeQuestionScreen> {
                   height: 20,
                 ),
                 Container(
+                  margin: const EdgeInsets.only(left: 16, right: 16),
                   width: boxConstraints.maxWidth,
-                  color: Colors.grey[200],
+                  decoration: AppConstant().pictureBox(),
                   child: Column(
                     crossAxisAlignment: CrossAxisAlignment.center,
                     children: [
@@ -160,7 +163,7 @@ class _EyeQuestionScreenState extends State<EyeQuestionScreen> {
                           Padding(
                             padding: const EdgeInsets.only(left: 20),
                             child: SizedBox(
-                              width: boxConstraints.maxWidth - 40,
+                              width: boxConstraints.maxWidth - 55,
                               child: Text(
                                 Languages.of(context)!.dailyQuestion6_1,
                                 style: TextStyle(
@@ -228,9 +231,9 @@ class _EyeQuestionScreenState extends State<EyeQuestionScreen> {
                 const SizedBox(
                   height: 20,
                 ),
-                Container(
+                Container(margin: const EdgeInsets.symmetric(horizontal: 16),
                   width: boxConstraints.maxWidth,
-                  color: Colors.grey[200],
+                 decoration: AppConstant().linearBox(),
                   child: Column(
                     crossAxisAlignment: CrossAxisAlignment.center,
                     children: [
@@ -253,7 +256,7 @@ class _EyeQuestionScreenState extends State<EyeQuestionScreen> {
                           Padding(
                             padding: const EdgeInsets.only(left: 20),
                             child: SizedBox(
-                              width: boxConstraints.maxWidth - 40,
+                              width: boxConstraints.maxWidth - 55,
                               child: Text(
                                 Languages.of(context)!.dailyQuestion7_1,
                                 style: TextStyle(
@@ -326,7 +329,8 @@ class _EyeQuestionScreenState extends State<EyeQuestionScreen> {
                     type: GFButtonType.outline2x,
                     shape: GFButtonShape.pills,
                     text: Languages.of(context)!.saveDailyquestion,
-                    textStyle: TextStyle(fontSize: 12.sp, color: GFColors.PRIMARY),
+                    textStyle:
+                        TextStyle(fontSize: 12.sp, color: GFColors.PRIMARY),
                     onPressed: () {
                       //List<double> eyeValue = [_dailyQuestion5, _dailyQuestion6, _dailyQuestion7];
                       Map<String, double> eyeValue = {
