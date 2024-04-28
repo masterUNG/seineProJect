@@ -40,312 +40,328 @@ class _EyeQuestionScreenState extends State<EyeQuestionScreen> {
                 const SizedBox(
                   height: 20,
                 ),
-                Container(
-                  margin: const EdgeInsets.symmetric(horizontal: 16),
-                  width: boxConstraints.maxWidth,
-                  decoration: AppConstant().gradientBox(),
-                  child: Column(
-                    crossAxisAlignment: CrossAxisAlignment.center,
-                    children: [
-                      Row(
-                        children: [
-                          Padding(
-                            padding: const EdgeInsets.only(left: 20),
-                            child: Text(
-                              Languages.of(context)!.dailyQuestion5,
-                              style: TextStyle(
-                                fontSize: 15.sp,
-                                fontWeight: FontWeight.bold,
-                              ),
-                            ),
-                          ),
-                        ],
-                      ),
-                      LayoutBuilder(
-                          builder: (context, BoxConstraints boxConstraints) {
-                        return Row(
-                          children: [
-                            Padding(
-                              padding: const EdgeInsets.only(left: 20),
-                              child: SizedBox(
-                                width: boxConstraints.maxWidth - 40,
-                                child: Text(
-                                  Languages.of(context)!.dailyQuestion5_1,
-                                  style: TextStyle(
-                                    fontSize: 12.sp,
-                                  ),
-                                ),
-                              ),
-                            ),
-                          ],
-                        );
-                      }),
-                      const SizedBox(
-                        height: 10,
-                      ),
-                      SizedBox(
-                        width: boxConstraints.maxWidth * 0.9,
-                        child: Stack(
-                          children: [
-                            FormBuilderSlider(
-                              name: 'slider',
-                              min: 0,
-                              max: 10,
-                              initialValue: _dailyQuestion5,
-                              divisions: 10,
-                              activeColor: Colors.redAccent,
-                              inactiveColor: Colors.pink[100],
-                              displayValues: DisplayValues.current,
-                              decoration: const InputDecoration(
-                                border: InputBorder.none,
-                                enabledBorder: InputBorder.none,
-                                focusedBorder: InputBorder.none,
-                                errorBorder: InputBorder.none,
-                                disabledBorder: InputBorder.none,
-                                contentPadding: EdgeInsets.only(
-                                  // left: 15,
-                                  bottom: 11,
-                                  top: 11,
-                                  // right: 15,
-                                ),
-                              ),
-                              onChanged: (value) {
-                                setState(() {
-                                  _dailyQuestion5 = value!;
-                                });
-                              },
-                              onChangeStart: (value) {
-                                setState(() {
-                                  _dailyQuestion5 = value;
-                                });
-                              },
-                              onChangeEnd: (value) {
-                                setState(() {
-                                  _dailyQuestion5 = value;
-                                });
-                              },
-                              numberFormat: NumberFormat('#'),
-                            ),
-                            displayFace(boxConstraints),
-                            displayNumber(boxConstraints),
-                          ],
-                        ),
-                      ),
-                    ],
-                  ),
-                ),
+                topContainer(boxConstraints, context),
                 const SizedBox(
                   height: 20,
                 ),
-                Container(
-                  margin: const EdgeInsets.only(left: 16, right: 16),
-                  width: boxConstraints.maxWidth,
-                  decoration: AppConstant().pictureBox(),
-                  child: Column(
-                    crossAxisAlignment: CrossAxisAlignment.center,
-                    children: [
-                      Row(
-                        children: [
-                          Padding(
-                            padding: const EdgeInsets.only(left: 20),
-                            child: Text(
-                              Languages.of(context)!.dailyQuestion6,
-                              style: TextStyle(
-                                fontSize: 15.sp,
-                                fontWeight: FontWeight.bold,
-                              ),
-                            ),
-                          ),
-                        ],
-                      ),
-                      Row(
-                        children: [
-                          Padding(
-                            padding: const EdgeInsets.only(left: 20),
-                            child: SizedBox(
-                              width: boxConstraints.maxWidth - 55,
-                              child: Text(
-                                Languages.of(context)!.dailyQuestion6_1,
-                                style: TextStyle(
-                                  fontSize: 12.sp,
-                                ),
-                              ),
-                            ),
-                          ),
-                        ],
-                      ),
-                      const SizedBox(
-                        height: 10,
-                      ),
-                      SizedBox(
-                        width: boxConstraints.maxWidth * 0.9,
-                        child: Stack(
-                          children: [
-                            FormBuilderSlider(
-                              name: 'slider',
-                              min: 0,
-                              max: 10,
-                              initialValue: _dailyQuestion6,
-                              divisions: 10,
-                              activeColor: Colors.redAccent,
-                              inactiveColor: Colors.pink[100],
-                              displayValues: DisplayValues.current,
-                              decoration: const InputDecoration(
-                                border: InputBorder.none,
-                                enabledBorder: InputBorder.none,
-                                focusedBorder: InputBorder.none,
-                                errorBorder: InputBorder.none,
-                                disabledBorder: InputBorder.none,
-                                contentPadding: EdgeInsets.only(
-                                  // left: 15,
-                                  bottom: 11,
-                                  top: 11,
-                                  // right: 15,
-                                ),
-                              ),
-                              onChanged: (value) {
-                                setState(() {
-                                  _dailyQuestion6 = value!;
-                                });
-                              },
-                              onChangeStart: (value) {
-                                setState(() {
-                                  _dailyQuestion6 = value;
-                                });
-                              },
-                              onChangeEnd: (value) {
-                                setState(() {
-                                  _dailyQuestion6 = value;
-                                });
-                              },
-                              numberFormat: NumberFormat('#'),
-                            ),
-                            displayFace(boxConstraints),
-                            displayNumber(boxConstraints),
-                          ],
-                        ),
-                      ),
-                    ],
-                  ),
-                ),
+                minContainer(boxConstraints, context),
                 const SizedBox(
                   height: 20,
                 ),
-                Container(margin: const EdgeInsets.symmetric(horizontal: 16),
-                  width: boxConstraints.maxWidth,
-                 decoration: AppConstant().linearBox(),
-                  child: Column(
-                    crossAxisAlignment: CrossAxisAlignment.center,
-                    children: [
-                      Row(
-                        children: [
-                          Padding(
-                            padding: const EdgeInsets.only(left: 20),
-                            child: Text(
-                              Languages.of(context)!.dailyQuestion7,
-                              style: TextStyle(
-                                fontSize: 15.sp,
-                                fontWeight: FontWeight.bold,
-                              ),
-                            ),
-                          ),
-                        ],
-                      ),
-                      Row(
-                        children: [
-                          Padding(
-                            padding: const EdgeInsets.only(left: 20),
-                            child: SizedBox(
-                              width: boxConstraints.maxWidth - 55,
-                              child: Text(
-                                Languages.of(context)!.dailyQuestion7_1,
-                                style: TextStyle(
-                                  fontSize: 12.sp,
-                                ),
-                              ),
-                            ),
-                          ),
-                        ],
-                      ),
-                      const SizedBox(
-                        height: 10,
-                      ),
-                      SizedBox(
-                        width: boxConstraints.maxWidth * 0.9,
-                        child: Stack(
-                          children: [
-                            FormBuilderSlider(
-                              name: 'slider',
-                              min: 0,
-                              max: 10,
-                              initialValue: _dailyQuestion7,
-                              divisions: 10,
-                              activeColor: Colors.redAccent,
-                              inactiveColor: Colors.pink[100],
-                              displayValues: DisplayValues.current,
-                              decoration: const InputDecoration(
-                                border: InputBorder.none,
-                                enabledBorder: InputBorder.none,
-                                focusedBorder: InputBorder.none,
-                                errorBorder: InputBorder.none,
-                                disabledBorder: InputBorder.none,
-                                contentPadding: EdgeInsets.only(
-                                  // left: 15,
-                                  bottom: 11,
-                                  top: 11,
-                                  // right: 15,
-                                ),
-                              ),
-                              onChanged: (value) {
-                                setState(() {
-                                  _dailyQuestion7 = value!;
-                                });
-                              },
-                              onChangeStart: (value) {
-                                setState(() {
-                                  _dailyQuestion7 = value;
-                                });
-                              },
-                              onChangeEnd: (value) {
-                                setState(() {
-                                  _dailyQuestion7 = value;
-                                });
-                              },
-                              numberFormat: NumberFormat('#'),
-                            ),
-                            displayFace(boxConstraints),
-                            displayNumber(boxConstraints),
-                          ],
-                        ),
-                      ),
-                    ],
-                  ),
-                ),
+                bottomContainer(boxConstraints, context),
                 const SizedBox(
                   height: 30,
                 ),
-                Center(
-                  child: GFButton(
-                    type: GFButtonType.outline2x,
-                    shape: GFButtonShape.pills,
-                    text: Languages.of(context)!.saveDailyquestion,
-                    textStyle:
-                        TextStyle(fontSize: 12.sp, color: GFColors.PRIMARY),
-                    onPressed: () {
-                      //List<double> eyeValue = [_dailyQuestion5, _dailyQuestion6, _dailyQuestion7];
-                      Map<String, double> eyeValue = {
-                        "_dailyQuestion5": _dailyQuestion5,
-                        "_dailyQuestion6": _dailyQuestion6,
-                        "_dailyQuestion7": _dailyQuestion7,
-                      };
-                      Navigator.pop(context, eyeValue);
-                    },
-                  ),
-                ),
+                saveButton(context),
               ],
             ),
           );
         }),
+      ),
+    );
+  }
+
+  Center saveButton(BuildContext context) {
+    return Center(
+      child: GFButton(
+        type: GFButtonType.outline2x,
+        shape: GFButtonShape.pills,
+        text: Languages.of(context)!.saveDailyquestion,
+        textStyle: TextStyle(fontSize: 12.sp, color: GFColors.PRIMARY),
+        onPressed: () {
+          //List<double> eyeValue = [_dailyQuestion5, _dailyQuestion6, _dailyQuestion7];
+          Map<String, double> eyeValue = {
+            "_dailyQuestion5": _dailyQuestion5,
+            "_dailyQuestion6": _dailyQuestion6,
+            "_dailyQuestion7": _dailyQuestion7,
+          };
+          Navigator.pop(context, eyeValue);
+        },
+      ),
+    );
+  }
+
+  Container bottomContainer(
+      BoxConstraints boxConstraints, BuildContext context) {
+    return Container(
+      margin: const EdgeInsets.symmetric(horizontal: 16),
+      width: boxConstraints.maxWidth,
+      decoration: AppConstant().linearBox(),
+      child: Column(
+        crossAxisAlignment: CrossAxisAlignment.center,
+        children: [
+          Row(
+            children: [
+              Padding(
+                padding: const EdgeInsets.only(left: 20),
+                child: Text(
+                  Languages.of(context)!.dailyQuestion7,
+                  style: TextStyle(
+                    fontSize: 15.sp,
+                    fontWeight: FontWeight.bold,
+                  ),
+                ),
+              ),
+            ],
+          ),
+          Row(
+            children: [
+              Padding(
+                padding: const EdgeInsets.only(left: 20),
+                child: SizedBox(
+                  width: boxConstraints.maxWidth - 55,
+                  child: Text(
+                    Languages.of(context)!.dailyQuestion7_1,
+                    style: TextStyle(
+                      fontSize: 12.sp,
+                    ),
+                  ),
+                ),
+              ),
+            ],
+          ),
+          const SizedBox(
+            height: 10,
+          ),
+          SizedBox(
+            width: boxConstraints.maxWidth * 0.9,
+            child: Stack(
+              children: [
+                FormBuilderSlider(
+                  name: 'slider',
+                  min: 0,
+                  max: 10,
+                  initialValue: _dailyQuestion7,
+                  divisions: 10,
+                  activeColor: Colors.redAccent,
+                  inactiveColor: Colors.pink[100],
+                  displayValues: DisplayValues.current,
+                  decoration: const InputDecoration(
+                    border: InputBorder.none,
+                    enabledBorder: InputBorder.none,
+                    focusedBorder: InputBorder.none,
+                    errorBorder: InputBorder.none,
+                    disabledBorder: InputBorder.none,
+                    contentPadding: EdgeInsets.only(
+                      // left: 15,
+                      bottom: 11,
+                      top: 11,
+                      // right: 15,
+                    ),
+                  ),
+                  onChanged: (value) {
+                    setState(() {
+                      _dailyQuestion7 = value!;
+                    });
+                  },
+                  onChangeStart: (value) {
+                    setState(() {
+                      _dailyQuestion7 = value;
+                    });
+                  },
+                  onChangeEnd: (value) {
+                    setState(() {
+                      _dailyQuestion7 = value;
+                    });
+                  },
+                  numberFormat: NumberFormat('#'),
+                ),
+                displayFace(boxConstraints),
+                displayNumber(boxConstraints),
+              ],
+            ),
+          ),
+        ],
+      ),
+    );
+  }
+
+  Container minContainer(BoxConstraints boxConstraints, BuildContext context) {
+    return Container(
+      margin: const EdgeInsets.only(left: 16, right: 16),
+      width: boxConstraints.maxWidth,
+      decoration: AppConstant().pictureBox(),
+      child: Column(
+        crossAxisAlignment: CrossAxisAlignment.center,
+        children: [
+          Row(
+            children: [
+              Padding(
+                padding: const EdgeInsets.only(left: 20),
+                child: Text(
+                  Languages.of(context)!.dailyQuestion6,
+                  style: TextStyle(
+                    fontSize: 15.sp,
+                    fontWeight: FontWeight.bold,
+                  ),
+                ),
+              ),
+            ],
+          ),
+          Row(
+            children: [
+              Padding(
+                padding: const EdgeInsets.only(left: 20),
+                child: SizedBox(
+                  width: boxConstraints.maxWidth - 55,
+                  child: Text(
+                    Languages.of(context)!.dailyQuestion6_1,
+                    style: TextStyle(
+                      fontSize: 12.sp,
+                    ),
+                  ),
+                ),
+              ),
+            ],
+          ),
+          const SizedBox(
+            height: 10,
+          ),
+          SizedBox(
+            width: boxConstraints.maxWidth * 0.9,
+            child: Stack(
+              children: [
+                FormBuilderSlider(
+                  name: 'slider',
+                  min: 0,
+                  max: 10,
+                  initialValue: _dailyQuestion6,
+                  divisions: 10,
+                  activeColor: Colors.redAccent,
+                  inactiveColor: Colors.pink[100],
+                  displayValues: DisplayValues.current,
+                  decoration: const InputDecoration(
+                    border: InputBorder.none,
+                    enabledBorder: InputBorder.none,
+                    focusedBorder: InputBorder.none,
+                    errorBorder: InputBorder.none,
+                    disabledBorder: InputBorder.none,
+                    contentPadding: EdgeInsets.only(
+                      // left: 15,
+                      bottom: 11,
+                      top: 11,
+                      // right: 15,
+                    ),
+                  ),
+                  onChanged: (value) {
+                    setState(() {
+                      _dailyQuestion6 = value!;
+                    });
+                  },
+                  onChangeStart: (value) {
+                    setState(() {
+                      _dailyQuestion6 = value;
+                    });
+                  },
+                  onChangeEnd: (value) {
+                    setState(() {
+                      _dailyQuestion6 = value;
+                    });
+                  },
+                  numberFormat: NumberFormat('#'),
+                ),
+                displayFace(boxConstraints),
+                displayNumber(boxConstraints),
+              ],
+            ),
+          ),
+        ],
+      ),
+    );
+  }
+
+  Container topContainer(BoxConstraints boxConstraints, BuildContext context) {
+    return Container(
+      margin: const EdgeInsets.symmetric(horizontal: 16),
+      width: boxConstraints.maxWidth,
+      decoration: AppConstant().gradientBox(),
+      child: Column(
+        crossAxisAlignment: CrossAxisAlignment.center,
+        children: [
+          Row(
+            children: [
+              Padding(
+                padding: const EdgeInsets.only(left: 20),
+                child: Text(
+                  Languages.of(context)!.dailyQuestion5,
+                  style: TextStyle(
+                    fontSize: 15.sp,
+                    fontWeight: FontWeight.bold,
+                  ),
+                ),
+              ),
+            ],
+          ),
+          LayoutBuilder(builder: (context, BoxConstraints boxConstraints) {
+            return Row(
+              children: [
+                Padding(
+                  padding: const EdgeInsets.only(left: 20),
+                  child: SizedBox(
+                    width: boxConstraints.maxWidth - 40,
+                    child: Text(
+                      Languages.of(context)!.dailyQuestion5_1,
+                      style: TextStyle(
+                        fontSize: 12.sp,
+                      ),
+                    ),
+                  ),
+                ),
+              ],
+            );
+          }),
+          const SizedBox(
+            height: 10,
+          ),
+          SizedBox(
+            width: boxConstraints.maxWidth * 0.9,
+            child: Stack(
+              children: [
+                FormBuilderSlider(
+                  name: 'slider',
+                  min: 0,
+                  max: 10,
+                  initialValue: _dailyQuestion5,
+                  divisions: 10,
+                  activeColor: Colors.redAccent,
+                  inactiveColor: Colors.pink[100],
+                  displayValues: DisplayValues.current,
+                  decoration: const InputDecoration(
+                    border: InputBorder.none,
+                    enabledBorder: InputBorder.none,
+                    focusedBorder: InputBorder.none,
+                    errorBorder: InputBorder.none,
+                    disabledBorder: InputBorder.none,
+                    contentPadding: EdgeInsets.only(
+                      // left: 15,
+                      bottom: 11,
+                      top: 11,
+                      // right: 15,
+                    ),
+                  ),
+                  onChanged: (value) {
+                    setState(() {
+                      _dailyQuestion5 = value!;
+                    });
+                  },
+                  onChangeStart: (value) {
+                    setState(() {
+                      _dailyQuestion5 = value;
+                    });
+                  },
+                  onChangeEnd: (value) {
+                    setState(() {
+                      _dailyQuestion5 = value;
+                    });
+                  },
+                  numberFormat: NumberFormat('#'),
+                ),
+                displayFace(boxConstraints),
+                displayNumber(boxConstraints),
+              ],
+            ),
+          ),
+        ],
       ),
     );
   }
