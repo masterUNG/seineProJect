@@ -486,488 +486,19 @@ class _QuestionScreenState extends State<QuestionScreen> {
                   const SizedBox(
                     height: 20,
                   ),
-                  Padding(
-                    padding: const EdgeInsets.symmetric(horizontal: 20),
-                    child: Text(
-                      Languages.of(context)!.question8,
-                      style: TextStyle(
-                        fontSize: 10.sp,
-                        fontWeight: FontWeight.bold,
-                      ),
-                    ),
-                  ),
-                  Padding(
-                    padding: const EdgeInsets.symmetric(
-                        horizontal: 80, vertical: 10),
-                    child: Row(
-                      mainAxisAlignment: MainAxisAlignment.center,
-                      children: [
-                        Radio(
-                          value: 'Yes',
-                          groupValue: _question8,
-                          onChanged: (value) {
-                            setState(() {
-                              _question8 = value.toString();
-                            });
-                          },
-                        ),
-                        Text(
-                          Languages.of(context)!.answerYes,
-                          style: TextStyle(
-                            fontSize: 10.sp,
-                          ),
-                        ),
-                        SizedBox(
-                          width: 12.h,
-                        ),
-                        Radio(
-                          value: 'No',
-                          groupValue: _question8,
-                          onChanged: (value) {
-                            setState(() {
-                              _question8 = value.toString();
-                            });
-                          },
-                        ),
-                        Text(
-                          Languages.of(context)!.answerNo,
-                          style: TextStyle(
-                            fontSize: 10.sp,
-                          ),
-                        ),
-                      ],
-                    ),
-                  ),
-                  _question8 == 'Yes'
-                      ? const SizedBox(
-                          height: 20,
-                        )
-                      : Container(),
-                  _question8 == 'Yes'
-                      ? Padding(
-                          padding: const EdgeInsets.symmetric(horizontal: 20),
-                          child: Text(
-                            Languages.of(context)!.question8_1,
-                            style: TextStyle(
-                              fontSize: 10.sp,
-                              fontWeight: FontWeight.bold,
-                            ),
-                          ),
-                        )
-                      : Container(),
-                  _question8 == 'Yes'
-                      ? Padding(
-                          padding: const EdgeInsets.symmetric(
-                              horizontal: 30, vertical: 10),
-                          child: TextFormField(
-                            minLines: 1,
-                            maxLines: 10,
-                            controller: _question8_1,
-                            keyboardType: TextInputType.text,
-                            decoration: InputDecoration(
-                              hintText: Languages.of(context)!.question8_1_1,
-                            ),
-                          ),
-                        )
-                      : Container(),
-                  _question8 == 'Yes'
-                      ? const SizedBox(
-                          height: 20,
-                        )
-                      : Container(),
-                  _question8 == 'Yes'
-                      ? Padding(
-                          padding: const EdgeInsets.symmetric(horizontal: 20),
-                          child: Text(
-                            Languages.of(context)!.question8_2,
-                            style: TextStyle(
-                              fontSize: 10.sp,
-                              fontWeight: FontWeight.bold,
-                            ),
-                          ),
-                        )
-                      : Container(),
-                  _question8 == 'Yes'
-                      ? Padding(
-                          padding: const EdgeInsets.symmetric(
-                              horizontal: 80, vertical: 10),
-                          child: Row(
-                            mainAxisAlignment: MainAxisAlignment.center,
-                            children: [
-                              Radio(
-                                value: 'Yes',
-                                groupValue: _question8_2,
-                                onChanged: (value) {
-                                  setState(() {
-                                    _question8_2 = value.toString();
-                                  });
-                                },
-                              ),
-                              Text(
-                                Languages.of(context)!.answerYes,
-                                style: TextStyle(
-                                  fontSize: 10.sp,
-                                ),
-                              ),
-                              SizedBox(
-                                width: 12.h,
-                              ),
-                              Radio(
-                                value: 'No',
-                                groupValue: _question8_2,
-                                onChanged: (value) {
-                                  setState(() {
-                                    _question8_2 = value.toString();
-                                  });
-                                },
-                              ),
-                              Text(
-                                Languages.of(context)!.answerNo,
-                                style: TextStyle(
-                                  fontSize: 10.sp,
-                                ),
-                              ),
-                            ],
-                          ),
-                        )
-                      : Container(),
-                  _question8_2 == 'Yes'
-                      ? const SizedBox(
-                          height: 20,
-                        )
-                      : Container(),
-                  _question8_2 == 'Yes'
-                      ? Padding(
-                          padding: const EdgeInsets.symmetric(horizontal: 20),
-                          child: Text(
-                            Languages.of(context)!.question8_3,
-                            style: TextStyle(
-                              fontSize: 10.sp,
-                              fontWeight: FontWeight.bold,
-                            ),
-                          ),
-                        )
-                      : Container(),
-                  _question8_2 == 'Yes'
-                      ? Padding(
-                          padding: const EdgeInsets.symmetric(
-                              horizontal: 30, vertical: 10),
-                          child: TextFormField(
-                            minLines: 1,
-                            maxLines: 10,
-                            controller: _question8_3,
-                            keyboardType: TextInputType.text,
-                            decoration: InputDecoration(
-                              hintText: Languages.of(context)!.question8_3_1,
-                            ),
-                          ),
-                        )
-                      : Container(),
+                  congenitalForm(context),
                   const SizedBox(
                     height: 20,
                   ),
-                  Padding(
-                    padding: const EdgeInsets.symmetric(horizontal: 20),
-                    child: Text(
-                      Languages.of(context)!.question9,
-                      style: TextStyle(
-                        fontSize: 10.sp,
-                        fontWeight: FontWeight.bold,
-                      ),
-                    ),
-                  ),
-                  Padding(
-                    padding: const EdgeInsets.symmetric(
-                        horizontal: 80, vertical: 10),
-                    child: Row(
-                      mainAxisAlignment: MainAxisAlignment.center,
-                      children: [
-                        Radio(
-                          value: 'Yes',
-                          groupValue: _question9,
-                          onChanged: (value) {
-                            setState(() {
-                              _question9 = value.toString();
-                            });
-                          },
-                        ),
-                        Text(
-                          Languages.of(context)!.answerYes,
-                          style: TextStyle(
-                            fontSize: 10.sp,
-                          ),
-                        ),
-                        SizedBox(
-                          width: 12.h,
-                        ),
-                        Radio(
-                          value: 'No',
-                          groupValue: _question9,
-                          onChanged: (value) {
-                            setState(() {
-                              _question9 = value.toString();
-                            });
-                          },
-                        ),
-                        Text(
-                          Languages.of(context)!.answerNo,
-                          style: TextStyle(
-                            fontSize: 10.sp,
-                          ),
-                        ),
-                      ],
-                    ),
-                  ),
-                  _question9 == 'Yes'
-                      ? const SizedBox(
-                          height: 20,
-                        )
-                      : Container(),
-                  _question9 == 'Yes'
-                      ? Padding(
-                          padding: const EdgeInsets.symmetric(horizontal: 20),
-                          child: Text(
-                            Languages.of(context)!.question9_1,
-                            style: TextStyle(
-                              fontSize: 10.sp,
-                              fontWeight: FontWeight.bold,
-                            ),
-                          ),
-                        )
-                      : Container(),
-                  _question9 == 'Yes'
-                      ? Padding(
-                          padding: const EdgeInsets.symmetric(
-                              horizontal: 30, vertical: 10),
-                          child: TextFormField(
-                            minLines: 1,
-                            maxLines: 10,
-                            controller: _question9_1,
-                            keyboardType: TextInputType.text,
-                            decoration: InputDecoration(
-                              hintText: Languages.of(context)!.question9_1_1,
-                            ),
-                          ),
-                        )
-                      : Container(),
+                  foodForm(context),
                   const SizedBox(
                     height: 20,
                   ),
-                  Padding(
-                    padding: const EdgeInsets.symmetric(horizontal: 20),
-                    child: Text(
-                      Languages.of(context)!.question10,
-                      style: TextStyle(
-                        fontSize: 10.sp,
-                        fontWeight: FontWeight.bold,
-                      ),
-                    ),
-                  ),
-                  Padding(
-                    padding: const EdgeInsets.symmetric(
-                        horizontal: 80, vertical: 10),
-                    child: Row(
-                      mainAxisAlignment: MainAxisAlignment.center,
-                      children: [
-                        Radio(
-                          value: 'Yes',
-                          groupValue: _question10,
-                          onChanged: (value) {
-                            setState(() {
-                              _question10 = value.toString();
-                            });
-                          },
-                        ),
-                        Text(
-                          Languages.of(context)!.answerYes,
-                          style: TextStyle(
-                            fontSize: 10.sp,
-                          ),
-                        ),
-                        SizedBox(
-                          width: 12.h,
-                        ),
-                        Radio(
-                          value: 'No',
-                          groupValue: _question10,
-                          onChanged: (value) {
-                            setState(() {
-                              _question10 = value.toString();
-                            });
-                          },
-                        ),
-                        Text(
-                          Languages.of(context)!.answerNo,
-                          style: TextStyle(
-                            fontSize: 10.sp,
-                          ),
-                        ),
-                      ],
-                    ),
-                  ),
-                  _question10 == 'Yes'
-                      ? const SizedBox(
-                          height: 20,
-                        )
-                      : Container(),
-                  _question10 == 'Yes'
-                      ? Padding(
-                          padding: const EdgeInsets.symmetric(horizontal: 20),
-                          child: Text(
-                            Languages.of(context)!.question10_1,
-                            style: const TextStyle(
-                              fontSize: 16,
-                              fontWeight: FontWeight.bold,
-                            ),
-                          ),
-                        )
-                      : Container(),
-                  _question10 == 'Yes'
-                      ? Padding(
-                          padding: const EdgeInsets.symmetric(
-                              horizontal: 30, vertical: 10),
-                          child: TextFormField(
-                            minLines: 1,
-                            maxLines: 10,
-                            controller: _question10_1,
-                            keyboardType: TextInputType.text,
-                            decoration: InputDecoration(
-                              hintText: Languages.of(context)!.question10_1_1,
-                            ),
-                          ),
-                        )
-                      : Container(),
+                  drugForm(context),
                   const SizedBox(
                     height: 20,
                   ),
-                  Padding(
-                    padding: const EdgeInsets.symmetric(horizontal: 20),
-                    child: Text(
-                      Languages.of(context)!.question11,
-                      style: TextStyle(
-                        fontSize: 10.sp,
-                        fontWeight: FontWeight.bold,
-                      ),
-                    ),
-                  ),
-                  Padding(
-                    padding: const EdgeInsets.symmetric(
-                        horizontal: 80, vertical: 10),
-                    child: Row(
-                      mainAxisAlignment: MainAxisAlignment.center,
-                      children: [
-                        Radio(
-                          value: 'Yes',
-                          groupValue: _question11,
-                          onChanged: (value) {
-                            setState(() {
-                              _question11 = value.toString();
-                            });
-                          },
-                        ),
-                        Text(
-                          Languages.of(context)!.answerYes,
-                          style: TextStyle(
-                            fontSize: 10.sp,
-                          ),
-                        ),
-                        SizedBox(
-                          width: 12.h,
-                        ),
-                        Radio(
-                          value: 'No',
-                          groupValue: _question11,
-                          onChanged: (value) {
-                            setState(() {
-                              _question11 = value.toString();
-                            });
-                          },
-                        ),
-                        Text(
-                          Languages.of(context)!.answerNo,
-                          style: TextStyle(
-                            fontSize: 10.sp,
-                          ),
-                        ),
-                      ],
-                    ),
-                  ),
-                  _question11 == 'Yes'
-                      ? const SizedBox(
-                          height: 20,
-                        )
-                      : Container(),
-                  _question11 == 'Yes'
-                      ? Padding(
-                          padding: const EdgeInsets.symmetric(horizontal: 20),
-                          child: Text(
-                            Languages.of(context)!.question11_1,
-                            style: TextStyle(
-                              fontSize: 10.sp,
-                              fontWeight: FontWeight.bold,
-                            ),
-                          ),
-                        )
-                      : Container(),
-                  _question11 == 'Yes'
-                      ? Padding(
-                          padding: const EdgeInsets.symmetric(
-                              horizontal: 80, vertical: 10),
-                          child: Row(
-                            mainAxisAlignment: MainAxisAlignment.center,
-                            children: [
-                              Radio(
-                                value: 'bySkin',
-                                groupValue: _question11_2,
-                                onChanged: (value) {
-                                  setState(() {
-                                    _question11_2 = value.toString();
-                                  });
-                                },
-                              ),
-                              Text(
-                                Languages.of(context)!.bySkin,
-                                style: TextStyle(
-                                  fontSize: 10.sp,
-                                ),
-                              ),
-                              SizedBox(
-                                width: 4.h,
-                              ),
-                              Radio(
-                                value: 'byBlood',
-                                groupValue: _question11_2,
-                                onChanged: (value) {
-                                  setState(() {
-                                    _question11_2 = value.toString();
-                                  });
-                                },
-                              ),
-                              Text(
-                                Languages.of(context)!.byBlood,
-                                style: TextStyle(
-                                  fontSize: 10.sp,
-                                ),
-                              ),
-                            ],
-                          ),
-                        )
-                      : Container(),
-                  _question11 == 'Yes'
-                      ? Padding(
-                          padding: const EdgeInsets.symmetric(
-                              horizontal: 30, vertical: 10),
-                          child: TextFormField(
-                            minLines: 1,
-                            maxLines: 10,
-                            controller: _question11_1,
-                            keyboardType: TextInputType.text,
-                            decoration: InputDecoration(
-                              hintText: Languages.of(context)!.question11_1_1,
-                            ),
-                          ),
-                        )
-                      : Container(),
+                  allergyForm(context),
                   const SizedBox(
                     height: 80,
                   ),
@@ -990,6 +521,523 @@ class _QuestionScreenState extends State<QuestionScreen> {
             style: TextStyle(fontSize: 12.sp),
           ),
         ),
+      ),
+    );
+  }
+
+  Container allergyForm(BuildContext context) {
+    return Container(
+      decoration: AppConstant().curBorder(),
+      child: Column(
+        mainAxisSize: MainAxisSize.min,
+        crossAxisAlignment: CrossAxisAlignment.start,
+        children: [
+          Padding(
+            padding: const EdgeInsets.symmetric(horizontal: 20),
+            child: Text(
+              Languages.of(context)!.question11,
+              style: TextStyle(
+                fontSize: 10.sp,
+                fontWeight: FontWeight.bold,
+              ),
+            ),
+          ),
+          Padding(
+            padding: const EdgeInsets.symmetric(horizontal: 70, vertical: 10),
+            child: Row(
+              mainAxisAlignment: MainAxisAlignment.center,
+              children: [
+                Radio(
+                  value: 'Yes',
+                  groupValue: _question11,
+                  onChanged: (value) {
+                    setState(() {
+                      _question11 = value.toString();
+                    });
+                  },
+                ),
+                Text(
+                  Languages.of(context)!.answerYes,
+                  style: TextStyle(
+                    fontSize: 10.sp,
+                  ),
+                ),
+                SizedBox(
+                  width: 12.h,
+                ),
+                Radio(
+                  value: 'No',
+                  groupValue: _question11,
+                  onChanged: (value) {
+                    setState(() {
+                      _question11 = value.toString();
+                    });
+                  },
+                ),
+                Text(
+                  Languages.of(context)!.answerNo,
+                  style: TextStyle(
+                    fontSize: 10.sp,
+                  ),
+                ),
+              ],
+            ),
+          ),
+          _question11 == 'Yes'
+              ? const SizedBox(
+                  height: 20,
+                )
+              : Container(),
+          _question11 == 'Yes'
+              ? Padding(
+                  padding: const EdgeInsets.symmetric(horizontal: 20),
+                  child: Text(
+                    Languages.of(context)!.question11_1,
+                    style: TextStyle(
+                      fontSize: 10.sp,
+                      fontWeight: FontWeight.bold,
+                    ),
+                  ),
+                )
+              : Container(),
+          _question11 == 'Yes'
+              ? Padding(
+                  padding:
+                      const EdgeInsets.symmetric(horizontal: 70, vertical: 10),
+                  child: Row(
+                    mainAxisAlignment: MainAxisAlignment.center,
+                    children: [
+                      Radio(
+                        value: 'bySkin',
+                        groupValue: _question11_2,
+                        onChanged: (value) {
+                          setState(() {
+                            _question11_2 = value.toString();
+                          });
+                        },
+                      ),
+                      Text(
+                        Languages.of(context)!.bySkin,
+                        style: TextStyle(
+                          fontSize: 10.sp,
+                        ),
+                      ),
+                      SizedBox(
+                        width: 4.h,
+                      ),
+                      Radio(
+                        value: 'byBlood',
+                        groupValue: _question11_2,
+                        onChanged: (value) {
+                          setState(() {
+                            _question11_2 = value.toString();
+                          });
+                        },
+                      ),
+                      Text(
+                        Languages.of(context)!.byBlood,
+                        style: TextStyle(
+                          fontSize: 10.sp,
+                        ),
+                      ),
+                    ],
+                  ),
+                )
+              : Container(),
+          _question11 == 'Yes'
+              ? Padding(
+                  padding:
+                      const EdgeInsets.symmetric(horizontal: 30, vertical: 10),
+                  child: TextFormField(
+                    minLines: 1,
+                    maxLines: 10,
+                    controller: _question11_1,
+                    keyboardType: TextInputType.text,
+                    decoration: InputDecoration(
+                      hintText: Languages.of(context)!.question11_1_1,
+                    ),
+                  ),
+                )
+              : Container(),
+        ],
+      ),
+    );
+  }
+
+  Container drugForm(BuildContext context) {
+    return Container(
+      decoration: AppConstant().curBorder(),
+      child: Column(
+        mainAxisSize: MainAxisSize.min,
+        crossAxisAlignment: CrossAxisAlignment.start,
+        children: [
+          Padding(
+            padding: const EdgeInsets.symmetric(horizontal: 20),
+            child: Text(
+              Languages.of(context)!.question10,
+              style: TextStyle(
+                fontSize: 10.sp,
+                fontWeight: FontWeight.bold,
+              ),
+            ),
+          ),
+          Padding(
+            padding: const EdgeInsets.symmetric(horizontal: 70, vertical: 10),
+            child: Row(
+              mainAxisAlignment: MainAxisAlignment.center,
+              children: [
+                Radio(
+                  value: 'Yes',
+                  groupValue: _question10,
+                  onChanged: (value) {
+                    setState(() {
+                      _question10 = value.toString();
+                    });
+                  },
+                ),
+                Text(
+                  Languages.of(context)!.answerYes,
+                  style: TextStyle(
+                    fontSize: 10.sp,
+                  ),
+                ),
+                SizedBox(
+                  width: 12.h,
+                ),
+                Radio(
+                  value: 'No',
+                  groupValue: _question10,
+                  onChanged: (value) {
+                    setState(() {
+                      _question10 = value.toString();
+                    });
+                  },
+                ),
+                Text(
+                  Languages.of(context)!.answerNo,
+                  style: TextStyle(
+                    fontSize: 10.sp,
+                  ),
+                ),
+              ],
+            ),
+          ),
+          _question10 == 'Yes'
+              ? const SizedBox(
+                  height: 20,
+                )
+              : Container(),
+          _question10 == 'Yes'
+              ? Padding(
+                  padding: const EdgeInsets.symmetric(horizontal: 20),
+                  child: Text(
+                    Languages.of(context)!.question10_1,
+                    style: const TextStyle(
+                      fontSize: 16,
+                      fontWeight: FontWeight.bold,
+                    ),
+                  ),
+                )
+              : Container(),
+          _question10 == 'Yes'
+              ? Padding(
+                  padding:
+                      const EdgeInsets.symmetric(horizontal: 30, vertical: 10),
+                  child: TextFormField(
+                    minLines: 1,
+                    maxLines: 10,
+                    controller: _question10_1,
+                    keyboardType: TextInputType.text,
+                    decoration: InputDecoration(
+                      hintText: Languages.of(context)!.question10_1_1,
+                    ),
+                  ),
+                )
+              : Container(),
+        ],
+      ),
+    );
+  }
+
+  Container foodForm(BuildContext context) {
+    return Container(
+      decoration: AppConstant().curBorder(),
+      child: Column(
+        mainAxisSize: MainAxisSize.min,
+        crossAxisAlignment: CrossAxisAlignment.start,
+        children: [
+          Padding(
+            padding: const EdgeInsets.symmetric(horizontal: 20),
+            child: Text(
+              Languages.of(context)!.question9,
+              style: TextStyle(
+                fontSize: 10.sp,
+                fontWeight: FontWeight.bold,
+              ),
+            ),
+          ),
+          Padding(
+            padding: const EdgeInsets.symmetric(horizontal: 70, vertical: 10),
+            child: Row(
+              mainAxisAlignment: MainAxisAlignment.center,
+              children: [
+                Radio(
+                  value: 'Yes',
+                  groupValue: _question9,
+                  onChanged: (value) {
+                    setState(() {
+                      _question9 = value.toString();
+                    });
+                  },
+                ),
+                Text(
+                  Languages.of(context)!.answerYes,
+                  style: TextStyle(
+                    fontSize: 10.sp,
+                  ),
+                ),
+                SizedBox(
+                  width: 12.h,
+                ),
+                Radio(
+                  value: 'No',
+                  groupValue: _question9,
+                  onChanged: (value) {
+                    setState(() {
+                      _question9 = value.toString();
+                    });
+                  },
+                ),
+                Text(
+                  Languages.of(context)!.answerNo,
+                  style: TextStyle(
+                    fontSize: 10.sp,
+                  ),
+                ),
+              ],
+            ),
+          ),
+          _question9 == 'Yes'
+              ? const SizedBox(
+                  height: 20,
+                )
+              : Container(),
+          _question9 == 'Yes'
+              ? Padding(
+                  padding: const EdgeInsets.symmetric(horizontal: 20),
+                  child: Text(
+                    Languages.of(context)!.question9_1,
+                    style: TextStyle(
+                      fontSize: 10.sp,
+                      fontWeight: FontWeight.bold,
+                    ),
+                  ),
+                )
+              : Container(),
+          _question9 == 'Yes'
+              ? Padding(
+                  padding:
+                      const EdgeInsets.symmetric(horizontal: 30, vertical: 10),
+                  child: TextFormField(
+                    minLines: 1,
+                    maxLines: 10,
+                    controller: _question9_1,
+                    keyboardType: TextInputType.text,
+                    decoration: InputDecoration(
+                      hintText: Languages.of(context)!.question9_1_1,
+                    ),
+                  ),
+                )
+              : Container(),
+        ],
+      ),
+    );
+  }
+
+  Container congenitalForm(BuildContext context) {
+    return Container(
+      decoration: AppConstant().curBorder(),
+      child: Column(
+        mainAxisSize: MainAxisSize.min,
+        crossAxisAlignment: CrossAxisAlignment.start,
+        children: [
+          Padding(
+            padding: const EdgeInsets.symmetric(horizontal: 20),
+            child: Text(
+              Languages.of(context)!.question8,
+              style: TextStyle(
+                fontSize: 10.sp,
+                fontWeight: FontWeight.bold,
+              ),
+            ),
+          ),
+          Padding(
+            padding: const EdgeInsets.symmetric(horizontal: 70, vertical: 10),
+            child: Row(
+              mainAxisAlignment: MainAxisAlignment.center,
+              children: [
+                Radio(
+                  value: 'Yes',
+                  groupValue: _question8,
+                  onChanged: (value) {
+                    setState(() {
+                      _question8 = value.toString();
+                    });
+                  },
+                ),
+                Text(
+                  Languages.of(context)!.answerYes,
+                  style: TextStyle(
+                    fontSize: 10.sp,
+                  ),
+                ),
+                SizedBox(
+                  width: 12.h,
+                ),
+                Radio(
+                  value: 'No',
+                  groupValue: _question8,
+                  onChanged: (value) {
+                    setState(() {
+                      _question8 = value.toString();
+                    });
+                  },
+                ),
+                Text(
+                  Languages.of(context)!.answerNo,
+                  style: TextStyle(
+                    fontSize: 10.sp,
+                  ),
+                ),
+              ],
+            ),
+          ),
+          _question8 == 'Yes'
+              ? const SizedBox(
+                  height: 20,
+                )
+              : Container(),
+          _question8 == 'Yes'
+              ? Padding(
+                  padding: const EdgeInsets.symmetric(horizontal: 20),
+                  child: Text(
+                    Languages.of(context)!.question8_1,
+                    style: TextStyle(
+                      fontSize: 10.sp,
+                      fontWeight: FontWeight.bold,
+                    ),
+                  ),
+                )
+              : Container(),
+          _question8 == 'Yes'
+              ? Padding(
+                  padding:
+                      const EdgeInsets.symmetric(horizontal: 30, vertical: 10),
+                  child: TextFormField(
+                    minLines: 1,
+                    maxLines: 10,
+                    controller: _question8_1,
+                    keyboardType: TextInputType.text,
+                    decoration: InputDecoration(
+                      hintText: Languages.of(context)!.question8_1_1,
+                    ),
+                  ),
+                )
+              : Container(),
+          _question8 == 'Yes'
+              ? const SizedBox(
+                  height: 20,
+                )
+              : Container(),
+          _question8 == 'Yes'
+              ? Padding(
+                  padding: const EdgeInsets.symmetric(horizontal: 20),
+                  child: Text(
+                    Languages.of(context)!.question8_2,
+                    style: TextStyle(
+                      fontSize: 10.sp,
+                      fontWeight: FontWeight.bold,
+                    ),
+                  ),
+                )
+              : Container(),
+          _question8 == 'Yes'
+              ? Padding(
+                  padding:
+                      const EdgeInsets.symmetric(horizontal: 70, vertical: 10),
+                  child: Row(
+                    mainAxisAlignment: MainAxisAlignment.center,
+                    children: [
+                      Radio(
+                        value: 'Yes',
+                        groupValue: _question8_2,
+                        onChanged: (value) {
+                          setState(() {
+                            _question8_2 = value.toString();
+                          });
+                        },
+                      ),
+                      Text(
+                        Languages.of(context)!.answerYes,
+                        style: TextStyle(
+                          fontSize: 10.sp,
+                        ),
+                      ),
+                      SizedBox(
+                        width: 12.h,
+                      ),
+                      Radio(
+                        value: 'No',
+                        groupValue: _question8_2,
+                        onChanged: (value) {
+                          setState(() {
+                            _question8_2 = value.toString();
+                          });
+                        },
+                      ),
+                      Text(
+                        Languages.of(context)!.answerNo,
+                        style: TextStyle(
+                          fontSize: 10.sp,
+                        ),
+                      ),
+                    ],
+                  ),
+                )
+              : Container(),
+          _question8_2 == 'Yes'
+              ? const SizedBox(
+                  height: 20,
+                )
+              : Container(),
+          _question8_2 == 'Yes'
+              ? Padding(
+                  padding: const EdgeInsets.symmetric(horizontal: 20),
+                  child: Text(
+                    Languages.of(context)!.question8_3,
+                    style: TextStyle(
+                      fontSize: 10.sp,
+                      fontWeight: FontWeight.bold,
+                    ),
+                  ),
+                )
+              : Container(),
+          _question8_2 == 'Yes'
+              ? Padding(
+                  padding:
+                      const EdgeInsets.symmetric(horizontal: 30, vertical: 10),
+                  child: TextFormField(
+                    minLines: 1,
+                    maxLines: 10,
+                    controller: _question8_3,
+                    keyboardType: TextInputType.text,
+                    decoration: InputDecoration(
+                      hintText: Languages.of(context)!.question8_3_1,
+                    ),
+                  ),
+                )
+              : Container(),
+        ],
       ),
     );
   }
