@@ -603,7 +603,7 @@ class _QuestionScreenState extends State<QuestionScreen> {
           _question11 == 'Yes'
               ? Padding(
                   padding:
-                      const EdgeInsets.symmetric(horizontal: 70, vertical: 10),
+                      const EdgeInsets.symmetric(horizontal: 60, vertical: 10),
                   child: Row(
                     mainAxisAlignment: MainAxisAlignment.center,
                     children: [
