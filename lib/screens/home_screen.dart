@@ -154,6 +154,8 @@ class _HomeScreenState extends State<HomeScreen> {
           .where('type', isEqualTo: 'daily')
           .get();
 
+      print('##28april ขนาดของ result ---> ${result.docs.length}');
+
       return result.docs;
     } else {
       if (selectedUser2 == '') {
@@ -186,109 +188,12 @@ class _HomeScreenState extends State<HomeScreen> {
           child: Column(
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
-              Padding(
-                padding:
-                    const EdgeInsets.symmetric(horizontal: 10, vertical: 20),
-                child: Row(
-                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                  children: [
-                    ClipRRect(
-                      borderRadius: BorderRadius.circular(35),
-                      child: profileImage == '' || profileImage == 'null'
-                          ? const GFAvatar(backgroundImage: AssetImage('assets/images/user.png'),)
-                          : GFAvatar(backgroundImage: NetworkImage(profileImage),),
-                    ),
-                    GFIconButton(
-                      color: GFColors.DARK,
-                      shape: GFIconButtonShape.circle,
-                      type: GFButtonType.outline,
-                      icon: const Icon(
-                        Icons.settings,
-                      ),
-                      onPressed: () {
-                        Navigator.push(context, MaterialPageRoute(
-                          builder: (context) {
-                            return const SettingScreen();
-                          },
-                        )).then((value) {
-                          _getUserName();
-                        });
-                      },
-                    )
-                  ],
-                ),
-              ),
-              Padding(
-                padding: const EdgeInsets.all(8.0),
-                child: Text(
-                  name,
-                  style: TextStyle(
-                    fontSize: 15.sp,
-                    fontWeight: FontWeight.bold,
-                  ),
-                ),
-              ),
+              avatarAndSettingContent(context),
+              nameContent(),
               const SizedBox(
                 height: 10,
               ),
-              TableCalendar(
-                locale: _locale,
-                focusedDay: _focusedDay,
-                firstDay: DateTime(2023),
-                lastDay: DateTime.now(),
-                calendarFormat: _calendarFormat,
-                daysOfWeekVisible: false,
-                headerStyle: HeaderStyle(
-                    titleTextStyle: TextStyle(fontSize: 11.sp),
-                    formatButtonTextStyle: TextStyle(fontSize: 7.sp)),
-                calendarStyle: CalendarStyle(
-                  weekendDecoration: BoxDecoration(
-                    color: Colors.red[100],
-                    borderRadius: BorderRadius.circular(5),
-                    border: Border.all(color: Colors.white),
-                    shape: BoxShape.rectangle,
-                  ),
-                  defaultDecoration: BoxDecoration(
-                    color: Colors.grey[200],
-                    borderRadius: BorderRadius.circular(5),
-                    border: Border.all(color: Colors.white),
-                    shape: BoxShape.rectangle,
-                  ),
-                  todayDecoration: BoxDecoration(
-                    color: Colors.grey[300],
-                    borderRadius: BorderRadius.circular(5),
-                    border: Border.all(color: Colors.white),
-                    shape: BoxShape.rectangle,
-                  ),
-                  selectedDecoration: BoxDecoration(
-                    color: Colors.blue[200],
-                    borderRadius: BorderRadius.circular(5),
-                    border: Border.all(color: Colors.white),
-                    shape: BoxShape.rectangle,
-                  ),
-                ),
-                onDaySelected: (selectedDay, focusedDay) {
-                  setState(() {
-                    _selectedDay = selectedDay;
-                    _focusedDay = focusedDay;
-                    _date = DateFormat('dd-MM-yyyy')
-                        .format(_selectedDay)
-                        .toString();
-                  });
-                  _getData();
-                },
-                selectedDayPredicate: (day) {
-                  return isSameDay(_selectedDay, day);
-                },
-                onPageChanged: (focusedDay) {
-                  _focusedDay = focusedDay;
-                },
-                onFormatChanged: (format) {
-                  setState(() {
-                    _calendarFormat = format;
-                  });
-                },
-              ),
+              calendarContent(),
               SizedBox(
                 height: _userType == 'admin' ? 15 : 30,
               ),
@@ -484,11 +389,14 @@ class _HomeScreenState extends State<HomeScreen> {
                 onPressed: () {
                   if (_preTest) {
                     Navigator.push(
-                            context,
-                            MaterialPageRoute(
-                                builder: (context) =>
-                                    const SelectDailyQuestion()))
-                        .then((value) => _getData());
+                        context,
+                        MaterialPageRoute(
+                            builder: (context) =>
+                                const SelectDailyQuestion())).then((value) {
+                      _getData().then((value) {
+                        setState(() {});
+                      });
+                    });
                   } else {
                     Navigator.push(
                         context,
@@ -511,6 +419,116 @@ class _HomeScreenState extends State<HomeScreen> {
                   color: Colors.white,
                 ),
               ),
+      ),
+    );
+  }
+
+  TableCalendar<dynamic> calendarContent() {
+    return TableCalendar(
+      locale: _locale,
+      focusedDay: _focusedDay,
+      firstDay: DateTime(2023),
+      lastDay: DateTime.now(),
+      calendarFormat: _calendarFormat,
+      daysOfWeekVisible: false,
+      headerStyle: HeaderStyle(
+          titleTextStyle: TextStyle(fontSize: 11.sp),
+          formatButtonTextStyle: TextStyle(fontSize: 7.sp)),
+      calendarStyle: CalendarStyle(
+        weekendDecoration: BoxDecoration(
+          color: Colors.red[100],
+          borderRadius: BorderRadius.circular(5),
+          border: Border.all(color: Colors.white),
+          shape: BoxShape.rectangle,
+        ),
+        defaultDecoration: BoxDecoration(
+          color: Colors.grey[200],
+          borderRadius: BorderRadius.circular(5),
+          border: Border.all(color: Colors.white),
+          shape: BoxShape.rectangle,
+        ),
+        todayDecoration: BoxDecoration(
+          color: Colors.grey[300],
+          borderRadius: BorderRadius.circular(5),
+          border: Border.all(color: Colors.white),
+          shape: BoxShape.rectangle,
+        ),
+        selectedDecoration: BoxDecoration(
+          color: Colors.blue[200],
+          borderRadius: BorderRadius.circular(5),
+          border: Border.all(color: Colors.white),
+          shape: BoxShape.rectangle,
+        ),
+      ),
+      onDaySelected: (selectedDay, focusedDay) {
+        setState(() {
+          _selectedDay = selectedDay;
+          _focusedDay = focusedDay;
+          _date = DateFormat('dd-MM-yyyy').format(_selectedDay).toString();
+        });
+        _getData();
+      },
+      selectedDayPredicate: (day) {
+        return isSameDay(_selectedDay, day);
+      },
+      onPageChanged: (focusedDay) {
+        _focusedDay = focusedDay;
+      },
+      onFormatChanged: (format) {
+        setState(() {
+          _calendarFormat = format;
+        });
+      },
+    );
+  }
+
+  Padding nameContent() {
+    return Padding(
+      padding: const EdgeInsets.all(8.0),
+      child: Text(
+        name,
+        style: TextStyle(
+          fontSize: 15.sp,
+          fontWeight: FontWeight.bold,
+        ),
+      ),
+    );
+  }
+
+  Padding avatarAndSettingContent(BuildContext context) {
+    return Padding(
+      padding: const EdgeInsets.symmetric(horizontal: 10, vertical: 20),
+      child: Row(
+        mainAxisAlignment: MainAxisAlignment.spaceBetween,
+        children: [
+          ClipRRect(
+            borderRadius: BorderRadius.circular(35),
+            child: profileImage == '' || profileImage == 'null'
+                ? const GFAvatar(
+                    backgroundImage: AssetImage('assets/images/user.png'),
+                  )
+                : GFAvatar(
+                    backgroundImage: NetworkImage(profileImage),
+                  ),
+          ),
+          GFIconButton(
+            color: GFColors.DARK,
+            shape: GFIconButtonShape.circle,
+            type: GFButtonType.outline,
+            icon: const Icon(
+              Icons.settings,
+            ),
+            onPressed: () {
+              Navigator.push(context, MaterialPageRoute(
+                builder: (context) {
+                  return const SettingScreen();
+                },
+              )).then((value) {
+                _getUserName();
+              });
+            },
+          )
+        ],
       ),
     );
   }
