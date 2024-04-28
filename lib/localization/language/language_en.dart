@@ -320,13 +320,13 @@ class LanguageEn extends Languages {
   String get dailyQuestion1 => 'Nasal congestion';
 
   @override
-  String get dailyQuestion1_1 => 'I breathe normally – I always have difficulty breathing on both day and night time';
+  String get dailyQuestion1_1 => 'I breathe normally - I always have difficulty breathing on both day and night time';
 
   @override
   String get dailyQuestion2 => 'Runny nose';
 
   @override
-  String get dailyQuestion2_1 => 'I have a dry nose for the whole day – I always having a runny nose all the time';
+  String get dailyQuestion2_1 => 'I have a dry nose for the whole day - I always having a runny nose all the time';
 
   @override
   String get dailyQuestion3 => 'The itchiness of your nose';
@@ -338,25 +338,25 @@ class LanguageEn extends Languages {
   String get dailyQuestion4 => 'Sneezing';
 
   @override
-  String get dailyQuestion4_1 => ' I don’t often sneeze – I sneeze very often that I affect my daily bases';
+  String get dailyQuestion4_1 => ' I don’t often sneeze - I sneeze very often that I affect my daily bases';
 
   @override
   String get dailyQuestion5 => 'Redness of the eyes';
 
   @override
-  String get dailyQuestion5_1 => ' My eyes are completely normal – Both of my eyes are red';
+  String get dailyQuestion5_1 => ' My eyes are completely normal - Both of my eyes are red';
 
   @override
   String get dailyQuestion6 => 'Allergy tears';
 
   @override
-  String get dailyQuestion6_1 => 'I don’t have any allergy tears – My tears always running that it affects my daily bases';
+  String get dailyQuestion6_1 => 'I don’t have any allergy tears - My tears always running that it affects my daily bases';
 
   @override
   String get dailyQuestion7 => 'Itchy eyes';
 
   @override
-  String get dailyQuestion7_1 => 'My eyes are completely normal – My eyes always itch that it affects my daily bases';
+  String get dailyQuestion7_1 => 'My eyes are completely normal - My eyes always itch that it affects my daily bases';
 
   @override
   String get notificationPleaseAnswer => 'notificationPleaseAnswer';

@@ -1,5 +1,6 @@
 import 'package:allergic_app/utility/app_constant.dart';
 import 'package:allergic_app/views/widget_image.dart';
+import 'package:allergic_app/views/widget_two_content.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/widgets.dart';
@@ -153,12 +154,7 @@ class _NoseQuestionScreenState extends State<NoseQuestionScreen> {
                 padding: const EdgeInsets.only(left: 20),
                 child: SizedBox(
                   width: boxConstraints.maxWidth - 55,
-                  child: Text(
-                    Languages.of(context)!.dailyQuestion4_1,
-                    style: TextStyle(
-                      fontSize: 12.sp,
-                    ),
-                  ),
+                  child: WidgetTwoContent(string: Languages.of(context)!.dailyQuestion4_1),
                 ),
               ),
             ],
@@ -243,12 +239,7 @@ class _NoseQuestionScreenState extends State<NoseQuestionScreen> {
                 padding: const EdgeInsets.only(left: 20),
                 child: SizedBox(
                   width: boxConstraints.maxWidth - 55,
-                  child: Text(
-                    Languages.of(context)!.dailyQuestion3_1,
-                    style: TextStyle(
-                      fontSize: 12.sp,
-                    ),
-                  ),
+                  child:WidgetTwoContent(string: Languages.of(context)!.dailyQuestion3_1),
                 ),
               ),
             ],
@@ -333,12 +324,7 @@ class _NoseQuestionScreenState extends State<NoseQuestionScreen> {
                 padding: const EdgeInsets.only(left: 20),
                 child: SizedBox(
                   width: boxConstraints.maxWidth - 55,
-                  child: Text(
-                    Languages.of(context)!.dailyQuestion2_1,
-                    style: TextStyle(
-                      fontSize: 12.sp,
-                    ),
-                  ),
+                  child: WidgetTwoContent(string: Languages.of(context)!.dailyQuestion2_1),
                 ),
               ),
             ],
@@ -423,12 +409,7 @@ class _NoseQuestionScreenState extends State<NoseQuestionScreen> {
                 padding: const EdgeInsets.only(left: 20, bottom: 16),
                 child: SizedBox(
                   width: boxConstraints.maxWidth - 55,
-                  child: Text(
-                    Languages.of(context)!.dailyQuestion1_1,
-                    style: TextStyle(
-                      fontSize: 12.sp,
-                    ),
-                  ),
+                  child: WidgetTwoContent(string: Languages.of(context)!.dailyQuestion1_1),
                 ),
               ),
             ],

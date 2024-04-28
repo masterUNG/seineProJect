@@ -1,5 +1,6 @@
 import 'package:allergic_app/utility/app_constant.dart';
 import 'package:allergic_app/views/widget_image.dart';
+import 'package:allergic_app/views/widget_two_content.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/painting.dart';
@@ -110,12 +111,7 @@ class _EyeQuestionScreenState extends State<EyeQuestionScreen> {
                 padding: const EdgeInsets.only(left: 20),
                 child: SizedBox(
                   width: boxConstraints.maxWidth - 55,
-                  child: Text(
-                    Languages.of(context)!.dailyQuestion7_1,
-                    style: TextStyle(
-                      fontSize: 12.sp,
-                    ),
-                  ),
+                  child: WidgetTwoContent(string: Languages.of(context)!.dailyQuestion7_1),
                 ),
               ),
             ],
@@ -204,12 +200,8 @@ class _EyeQuestionScreenState extends State<EyeQuestionScreen> {
                 padding: const EdgeInsets.only(left: 20),
                 child: SizedBox(
                   width: boxConstraints.maxWidth - 55,
-                  child: Text(
-                    Languages.of(context)!.dailyQuestion6_1,
-                    style: TextStyle(
-                      fontSize: 12.sp,
-                    ),
-                  ),
+                  child: WidgetTwoContent(
+                      string: Languages.of(context)!.dailyQuestion6_1),
                 ),
               ),
             ],
@@ -299,12 +291,8 @@ class _EyeQuestionScreenState extends State<EyeQuestionScreen> {
                   padding: const EdgeInsets.only(left: 20),
                   child: SizedBox(
                     width: boxConstraints.maxWidth - 40,
-                    child: Text(
-                      Languages.of(context)!.dailyQuestion5_1,
-                      style: TextStyle(
-                        fontSize: 12.sp,
-                      ),
-                    ),
+                    child: WidgetTwoContent(
+                        string: Languages.of(context)!.dailyQuestion5_1),
                   ),
                 ),
               ],

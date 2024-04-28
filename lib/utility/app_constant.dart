@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter/widgets.dart';
 import 'package:sizer/sizer.dart';
 
 class AppConstant {
@@ -17,6 +18,13 @@ class AppConstant {
     'assets/images/user.png',
     'assets/images/user.png',
   ];
+
+  TextStyle smallStyle() => TextStyle(
+        fontSize: 10.sp,
+        letterSpacing: 0.25,
+        wordSpacing: 1,
+        height: 1.0,
+      );
 
   TextStyle appStyle({
     double? fontSize,
@@ -53,7 +61,6 @@ class AppConstant {
         ], radius: 1.2, center: Alignment.center),
       );
 
-      
   BoxDecoration linearBox() => BoxDecoration(
       borderRadius: BorderRadius.circular(15),
       gradient: const LinearGradient(
