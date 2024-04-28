@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter/rendering.dart';
 import 'package:flutter/widgets.dart';
 import 'package:sizer/sizer.dart';
 
@@ -18,6 +19,8 @@ class AppConstant {
     'assets/images/user.png',
     'assets/images/user.png',
   ];
+
+  BoxDecoration curBorder() => BoxDecoration(border: Border.all());
 
   TextStyle smallStyle() => TextStyle(
         fontSize: 10.sp,
